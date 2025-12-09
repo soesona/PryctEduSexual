@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:text="Métodos de Planificación"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#333"
+            android:layout_marginBottom="16dp"
+            android:gravity="center_vertical"
+            android:drawablePadding="10dp"
+            app:drawableStartCompat="@drawable/ic_pill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:layout_marginBottom="20dp">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <Button android:id="@+id/filterTodos" android:text="Todos" android:textSize="12sp" android:backgroundTint="#6200EE" android:layout_marginEnd="8dp" android:layout_width="wrap_content" android:layout_height="40dp"/>
+                <Button android:id="@+id/filterHormonal" android:text="Hormonal" android:textSize="12sp" android:backgroundTint="#BDBDBD" android:layout_marginEnd="8dp" android:layout_width="wrap_content" android:layout_height="40dp"/>
+                <Button android:id="@+id/filterBarrera" android:text="Barrera" android:textSize="12sp" android:backgroundTint="#BDBDBD" android:layout_marginEnd="8dp" android:layout_width="wrap_content" android:layout_height="40dp"/>
+                <Button android:id="@+id/filterPerm" android:text="Permanente" android:textSize="12sp" android:backgroundTint="#BDBDBD" android:layout_marginEnd="8dp" android:layout_width="wrap_content" android:layout_height="40dp"/>
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardPildora"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp">
+            <LinearLayout
+                android:padding="16dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:text="Píldora Anticonceptiva" android:textStyle="bold" android:textSize="18sp" android:layout_weight="1" android:layout_width="0dp" android:layout_height="wrap_content"/>
+                    <TextView android:text="Hormonal" android:textSize="12sp" android:background="#E1BEE7" android:padding="4dp" android:textColor="#4A148C" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <TextView android:text="★ 99% Efectivo" android:textColor="#4CAF50" android:textStyle="bold" android:layout_marginTop="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="Se toma diariamente. Regula el ciclo y reduce acné. Requiere receta." android:textColor="#757575" android:textSize="14sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardCondon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp">
+            <LinearLayout
+                android:padding="16dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:text="Preservativo Masculino" android:textStyle="bold" android:textSize="18sp" android:layout_weight="1" android:layout_width="0dp" android:layout_height="wrap_content"/>
+                    <TextView android:text="Barrera" android:textSize="12sp" android:background="#BBDEFB" android:padding="4dp" android:textColor="#0D47A1" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <TextView android:text="★☆ 85-98% Efectivo" android:textColor="#FF9800" android:textStyle="bold" android:layout_marginTop="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="El único que protege contra ETS y embarazo a la vez. Sin hormonas." android:textColor="#757575" android:textSize="14sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardDiu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp">
+            <LinearLayout
+                android:padding="16dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:text="DIU Hormonal" android:textStyle="bold" android:textSize="18sp" android:layout_weight="1" android:layout_width="0dp" android:layout_height="wrap_content"/>
+                    <TextView android:text="Hormonal" android:textSize="12sp" android:background="#E1BEE7" android:padding="4dp" android:textColor="#4A148C" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <TextView android:text="★ 99% Efectivo" android:textColor="#4CAF50" android:textStyle="bold" android:layout_marginTop="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="Dispositivo intrauterino. Dura 3-5 años. Te olvidas de la toma diaria." android:textColor="#757575" android:textSize="14sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardVasec"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp">
+            <LinearLayout
+                android:padding="16dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:text="Vasectomía" android:textStyle="bold" android:textSize="18sp" android:layout_weight="1" android:layout_width="0dp" android:layout_height="wrap_content"/>
+                    <TextView android:text="Permanente" android:textSize="12sp" android:background="#CFD8DC" android:padding="4dp" android:textColor="#37474F" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <TextView android:text="★ 99.9% Efectivo" android:textColor="#4CAF50" android:textStyle="bold" android:layout_marginTop="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="Cirugía sencilla. No afecta el desempeño sexual. No protege de ETS." android:textColor="#757575" android:textSize="14sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/btnLaunchQuizMethods"
+            android:text="🧠 PONER A PRUEBA LO APRENDIDO"
+            android:backgroundTint="#6200EE"
+            android:textStyle="bold"
+            android:padding="15dp"
+            android:layout_marginBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:text="ETS y Cuidados"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#333"
+            android:drawablePadding="10dp"
+            app:drawableStartCompat="@drawable/ic_virus"
+            android:layout_marginBottom="20dp"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            app:cardCornerRadius="16dp"
+            app:cardBackgroundColor="#7C4DFF"
+            app:cardElevation="4dp">
+            <LinearLayout
+                android:padding="20dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="🛡️ Regla de Oro"
+                    android:textColor="#FFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:text="El CONDÓN es el único método que reduce drásticamente el riesgo de todas las ETS. Úsalo siempre, de principio a fin."
+                    android:textColor="#EDE7F6"
+                    android:textSize="15sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:text="Guía de Infecciones Comunes"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#455A64"
+            android:layout_marginBottom="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp">
+            <LinearLayout
+                android:padding="16dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:text="VIH / SIDA" android:textStyle="bold" android:textSize="18sp" android:layout_weight="1" android:layout_width="0dp" android:layout_height="wrap_content"/>
+                    <TextView android:text="Crónica" android:textSize="12sp" android:background="#FFEBEE" android:padding="4dp" android:textColor="#D32F2F" android:textStyle="bold" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <TextView android:text="Ataca el sistema inmune. Se transmite por sangre, semen, fluidos vaginales y leche materna." android:layout_marginTop="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="TRATAMIENTO: Antirretrovirales (Permiten vida normal pero no curan)." android:textSize="13sp" android:textStyle="italic" android:textColor="#555" android:layout_marginTop="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp">
+            <LinearLayout
+                android:padding="16dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:text="Sífilis" android:textStyle="bold" android:textSize="18sp" android:layout_weight="1" android:layout_width="0dp" android:layout_height="wrap_content"/>
+                    <TextView android:text="Curable" android:textSize="12sp" android:background="#E8F5E9" android:padding="4dp" android:textColor="#2E7D32" android:textStyle="bold" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <TextView android:text="Inicia con una llaga indolora. Si no se trata, daña el corazón y cerebro a largo plazo." android:layout_marginTop="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:text="TRATAMIENTO: Antibióticos (Penicilina)." android:textSize="13sp" android:textStyle="italic" android:textColor="#555" android:layout_marginTop="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp">
+            <LinearLayout
+                android:padding="16dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:text="VPH (Papiloma)" android:textStyle="bold" android:textSize="18sp" android:layout_weight="1" android:layout_width="0dp" android:layout_height="wrap_content"/>
+                    <TextView android:text="Controlable" android:textSize="12sp" android:background="#FFF3E0" android:padding="4dp" android:textColor="#EF6C00" android:textStyle="bold" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <TextView android:text="Muy común. Causa verrugas genitales y puede derivar en cáncer. Existe VACUNA preventiva." android:layout_marginTop="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp">
+            <LinearLayout
+                android:padding="16dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:text="Herpes Genital" android:textStyle="bold" android:textSize="18sp" android:layout_weight="1" android:layout_width="0dp" android:layout_height="wrap_content"/>
+                    <TextView android:text="Crónica" android:textSize="12sp" android:background="#FFEBEE" android:padding="4dp" android:textColor="#D32F2F" android:textStyle="bold" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <TextView android:text="Ampollas dolorosas. Se contagia piel con piel (el condón no cubre todo). El virus se queda en el cuerpo." android:layout_marginTop="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/btnLaunchQuizEts"
+            android:text="🧠 ¿CUÁNTO APRENDISTE DE ETS?"
+            android:backgroundTint="#9C27B0"
+            android:textStyle="bold"
+            android:padding="15dp"
+            android:layout_marginBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+</ScrollView>

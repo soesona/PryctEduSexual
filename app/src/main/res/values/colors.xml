@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="backApp">#e1e7f1</color>
+    <color name="backCalendar">#EBF1FF</color>
+    <color name="pinkPastel">#ED7182</color>
+    <color name="pinkPastel2">#C85D6C</color>
+    <color name="purple">#967CE7</color>
+    <color name="menstrualDays">#ED7182</color>
+    <color name="menstrualDays2">#F4B22F</color>
+    <color name="alertRed">#D64545</color>
+    <color name="alertRedbutton">#92F4BEBE</color>
+    <color name="pinkText">#F86479</color>
+
+
+
+
+
+
+
+</resources>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.proyectofinal.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login">
+
+        <action
+            android:id="@+id/action_login_to_home"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true"/>
+
+        <action
+            android:id="@+id/action_login_to_register"
+            app:destination="@id/registerFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.proyectofinal.RegisterFragment"
+        android:label="Registro"
+        tools:layout="@layout/fragment_register" />
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.proyectofinal.HomeFragment"
+        android:label="Inicio"
+        tools:layout="@layout/fragment_home">
+
+        <action android:id="@+id/action_home_to_methods" app:destination="@id/methodsFragment" />
+        <action android:id="@+id/action_home_to_ets" app:destination="@id/etsFragment" />
+        <action android:id="@+id/action_home_to_myths" app:destination="@id/mythsFragment" />
+    </fragment>
+
+    <fragment android:id="@+id/quizFragment" android:name="com.example.proyectofinal.QuizFragment" tools:layout="@layout/fragment_quiz" />
+    <fragment android:id="@+id/trackerFragment" android:name="com.example.proyectofinal.TrackerFragment" tools:layout="@layout/fragment_tracker" />
+    <fragment android:id="@+id/sosFragment" android:name="com.example.proyectofinal.SosFragment" tools:layout="@layout/fragment_sos" />
+    <fragment
+        android:id="@+id/methodsFragment"
+        android:name="com.example.proyectofinal.MethodsFragment"
+        android:label="Métodos"
+        tools:layout="@layout/fragment_methods">
+
+        <action
+            android:id="@+id/action_methodsFragment_to_quizFragment"
+            app:destination="@id/quizFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/etsFragment"
+        android:name="com.example.proyectofinal.EtsFragment"
+        android:label="ETS"
+        tools:layout="@layout/fragment_ets">
+
+        <action
+            android:id="@+id/action_etsFragment_to_quizFragment"
+            app:destination="@id/quizFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/mythsFragment"
+        android:name="com.example.proyectofinal.MythsFragment"
+        android:label="Mitos"
+        tools:layout="@layout/fragment_myths">
+
+        <action
+            android:id="@+id/action_mythsFragment_to_quizFragment"
+            app:destination="@id/quizFragment" />
+
+    </fragment>
+
+</navigation>
