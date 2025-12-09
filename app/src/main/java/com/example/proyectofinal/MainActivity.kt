@@ -18,7 +18,8 @@ class MainActivity : AppCompatActivity() {
         prefs.edit().putInt("puntaje", 0).apply()
 
 
-        val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         val navController = navHostFragment.navController
         val bottomNav = findViewById<BottomNavigationView>(R.id.bottom_nav_view)
 
@@ -26,15 +27,15 @@ class MainActivity : AppCompatActivity() {
 
 
         navController.addOnDestinationChangedListener { _, destination, _ ->
-
             when (destination.id) {
                 R.id.loginFragment,
                 R.id.registerFragment,
+                R.id.changePasswordFragment,
                 R.id.quizFragment -> {
                     bottomNav.visibility = View.GONE
                 }
-                else -> {
 
+                else -> {
                     bottomNav.visibility = View.VISIBLE
                 }
             }

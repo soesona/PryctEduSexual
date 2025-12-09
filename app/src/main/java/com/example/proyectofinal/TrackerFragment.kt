@@ -29,6 +29,7 @@ import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 import android.widget.ImageButton
 import androidx.core.content.ContextCompat
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.kizitonwose.calendar.core.DayPosition
 
 class MonthViewContainer(view: View) : ViewContainer(view) {
@@ -50,6 +51,11 @@ class TrackerFragment : Fragment(R.layout.fragment_tracker) {
     private var userIdActual = -1
     private val duracionPeriodoDias = 5
     private val duracionCicloDias = 28
+
+    private var currentPage = 0
+    private val pageSize = 3
+
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -193,6 +199,21 @@ class TrackerFragment : Fragment(R.layout.fragment_tracker) {
         }
 
 
+        binding.btnPrevPage.setOnClickListener {
+            if (currentPage > 0) {
+                currentPage--
+                mostrarPagina()
+            }
+        }
+
+        binding.btnNextPage.setOnClickListener {
+            val totalPages = (ciclosGuardados.size + pageSize - 1) / pageSize
+            if (currentPage < totalPages - 1) {
+                currentPage++
+                mostrarPagina()
+            }
+        }
+
         cargarHistorialDesdeBD()
     }
 
@@ -267,7 +288,65 @@ class TrackerFragment : Fragment(R.layout.fragment_tracker) {
     }
 
 
+    private fun mostrarPagina() {
+        val totalPages = (ciclosGuardados.size + pageSize - 1) / pageSize
+        val startIndex = currentPage * pageSize
+        val endIndex = minOf(startIndex + pageSize, ciclosGuardados.size)
 
+        val pagina = ciclosGuardados.subList(startIndex, endIndex)
+
+        val adapter = HistorialAdapter(
+            pagina,
+            onEditar = { ciclo ->
+
+                val formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy")
+                val inicio = LocalDate.parse(ciclo.startDate, formatter)
+                val fin = LocalDate.parse(ciclo.endDate, formatter)
+
+                fechaInicioCiclo = inicio
+                diasSeleccionados.clear()
+                var fecha = inicio
+                while (!fecha.isAfter(fin)) {
+                    diasSeleccionados.add(fecha)
+                    fecha = fecha.plusDays(1)
+                }
+
+                cicloSeleccionadoParaEditar = ciclo
+                binding.tvInicio.text = ciclo.startDate
+                binding.tvFin.text = ciclo.endDate
+
+                binding.calendarView.scrollToMonth(YearMonth.from(inicio))
+                binding.calendarView.notifyCalendarChanged()
+            },
+            onEliminar = { ciclo ->
+                lifecycleScope.launch {
+                    val db = AppDatabase.getDatabase(requireContext())
+                    db.appDao().deleteCycle(ciclo)
+                    Toast.makeText(requireContext(), "Ciclo eliminado", Toast.LENGTH_SHORT).show()
+
+
+                    cicloSeleccionadoParaEditar = null
+                    diasSeleccionados.clear()
+                    fechaInicioCiclo = null
+                    binding.tvInicio.text = "--/--/--"
+                    binding.tvFin.text = "--/--/--"
+
+                    cargarHistorialDesdeBD()
+                    binding.calendarView.notifyCalendarChanged()
+                }
+            }
+        )
+
+        binding.containerHistorial.layoutManager = LinearLayoutManager(requireContext())
+        binding.containerHistorial.adapter = adapter
+
+        binding.tvPageIndicator.text = "Página ${currentPage + 1} de $totalPages"
+        binding.btnPrevPage.visibility =
+            if (currentPage > 0) View.VISIBLE else View.GONE
+
+        binding.btnNextPage.visibility =
+            if (currentPage < totalPages - 1) View.VISIBLE else View.GONE
+    }
 
     private fun cargarHistorialDesdeBD() {
         if (userIdActual == -1) return
@@ -275,61 +354,13 @@ class TrackerFragment : Fragment(R.layout.fragment_tracker) {
             val db = AppDatabase.getDatabase(requireContext())
             val formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy")
 
+
             ciclosGuardados = db.appDao().getHistory(userIdActual)
                 .sortedByDescending { LocalDate.parse(it.startDate, formatter) }
 
-            val contenedor = binding.containerHistorial
-            contenedor.removeAllViews()
+            currentPage = 0
+            mostrarPagina()
 
-            for (ciclo in ciclosGuardados) {
-                val itemView = layoutInflater.inflate(R.layout.item_historial, contenedor, false)
-
-                val tvFechas = itemView.findViewById<TextView>(R.id.tvFechas)
-                val btnEditar = itemView.findViewById<ImageButton>(R.id.btnEditar)
-                val btnEliminar = itemView.findViewById<ImageButton>(R.id.btnEliminar)
-
-                tvFechas.text = "Inicio: ${ciclo.startDate} • Fin: ${ciclo.endDate}"
-
-
-                itemView.setOnClickListener {
-                    val inicio = LocalDate.parse(ciclo.startDate, formatter)
-                    val fin = LocalDate.parse(ciclo.endDate, formatter)
-
-                    fechaInicioCiclo = inicio
-                    diasSeleccionados.clear()
-                    var fecha = inicio
-                    while (!fecha.isAfter(fin)) {
-                        diasSeleccionados.add(fecha)
-                        fecha = fecha.plusDays(1)
-                    }
-
-                    cicloSeleccionadoParaEditar = ciclo
-                    binding.tvInicio.text = ciclo.startDate
-                    binding.tvFin.text = ciclo.endDate
-
-
-                    binding.calendarView.scrollToMonth(YearMonth.from(inicio))
-                    binding.calendarView.notifyCalendarChanged()
-                }
-
-
-                btnEditar.setOnClickListener {
-                    itemView.performClick()
-
-                }
-
-
-                btnEliminar.setOnClickListener {
-                    lifecycleScope.launch {
-                        db.appDao().deleteCycle(ciclo)
-                        Toast.makeText(requireContext(), "Ciclo eliminado", Toast.LENGTH_SHORT).show()
-                        cargarHistorialDesdeBD()
-                        binding.calendarView.notifyCalendarChanged()
-                    }
-                }
-
-                contenedor.addView(itemView)
-            }
 
             binding.calendarView.notifyCalendarChanged()
         }

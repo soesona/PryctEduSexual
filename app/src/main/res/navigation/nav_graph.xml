@@ -18,6 +18,10 @@
             app:popUpToInclusive="true"/>
 
         <action
+            android:id="@+id/action_loginFragment_to_changePasswordFragment"
+            app:destination="@id/changePasswordFragment" />
+
+        <action
             android:id="@+id/action_login_to_register"
             app:destination="@id/registerFragment" />
     </fragment>
@@ -75,5 +79,29 @@
             app:destination="@id/quizFragment" />
 
     </fragment>
+
+    <action
+        android:id="@+id/action_home_to_editProfileFragment"
+        app:destination="@id/editProfileFragment" />
+
+
+<fragment
+android:id="@+id/editProfileFragment"
+android:name="com.example.proyectofinal.EditarPerfilFragment"
+android:label="Editar Perfil"
+tools:layout="@layout/fragment_edit_profile" />
+
+
+
+
+
+
+    <fragment
+        android:id="@+id/changePasswordFragment"
+        android:name="com.example.proyectofinal.ChangePasswordFragment"
+        android:label="Cambiar Contraseña"
+        tools:layout="@layout/fragment_change_password" />
+
+
 
 </navigation>

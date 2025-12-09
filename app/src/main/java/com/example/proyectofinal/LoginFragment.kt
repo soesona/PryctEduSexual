@@ -16,8 +16,11 @@ import kotlinx.coroutines.launch
 // Asegúrate de que estos imports no salgan en rojo.
 // Si salen en rojo, borra y vuélvelos a escribir o usa Alt+Enter.
 import com.example.proyectofinal.AppDatabase
+import com.example.proyectofinal.databinding.FragmentLoginBinding
 
 class LoginFragment : Fragment() {
+
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -30,6 +33,14 @@ class LoginFragment : Fragment() {
         val etPass = view.findViewById<EditText>(R.id.etPasswordLogin)
         val btnLogin = view.findViewById<Button>(R.id.btnLogin)
         val btnRegister = view.findViewById<Button>(R.id.btnGoToRegister)
+        val binding = FragmentLoginBinding.bind(view)
+
+
+
+
+        binding.tvForgotPassword.setOnClickListener {
+            findNavController().navigate(R.id.action_loginFragment_to_changePasswordFragment)
+        }
 
 
         btnRegister.setOnClickListener {
@@ -41,7 +52,7 @@ class LoginFragment : Fragment() {
             }
         }
 
-        // --- BOTÓN 2: INICIAR SESIÓN ---
+
         btnLogin.setOnClickListener {
             val username = etUserLogin.text.toString().trim()
             val pass = etPass.text.toString().trim()

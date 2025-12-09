@@ -2,22 +2,27 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/homeFragment"
-        android:icon="@android:drawable/ic_menu_rotate"
+        android:icon="@drawable/ic_home"
         android:title="Inicio" />
 
 
     <item
         android:id="@+id/quizFragment"
-        android:icon="@android:drawable/ic_menu_help"
-        android:title="Quiz" />
+        android:icon="@drawable/ic_quizz"
+        android:title="Cuestionarios" />
 
     <item
         android:id="@+id/trackerFragment"
-        android:icon="@android:drawable/ic_menu_my_calendar"
-        android:title="Mi Ciclo" />
+        android:icon="@drawable/ic_calendar"
+        android:title="Mi ciclo" />
 
     <item
         android:id="@+id/sosFragment"
-        android:icon="@android:drawable/ic_menu_call"
+        android:icon="@drawable/ic_phone"
         android:title="SOS" />
+
+    <item
+        android:id="@+id/editProfileFragment"
+        android:icon="@drawable/ic_user"
+        android:title="Perfil" />
 </menu>

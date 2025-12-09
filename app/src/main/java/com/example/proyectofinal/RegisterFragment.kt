@@ -12,7 +12,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import kotlinx.coroutines.launch
-import android.app.DatePickerDialog // Necesario para la mejor práctica de fecha
+import android.app.DatePickerDialog
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Locale
@@ -38,12 +38,12 @@ class RegisterFragment : Fragment() {
                 val selectedCalendar = Calendar.getInstance()
                 selectedCalendar.set(selectedYear, selectedMonth, selectedDay)
 
-                // Formato que se guarda en la base de datos (y que usamos para el cálculo)
+
                 val dbFormat = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
                 selectedBirthdate = dbFormat.format(selectedCalendar.time)
 
 
-                // Formato que se muestra al usuario
+
                 val displayFormat = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
                 dateEditText.setText(displayFormat.format(selectedCalendar.time))
             },
@@ -51,7 +51,7 @@ class RegisterFragment : Fragment() {
             month,
             day
         )
-        // Opcional: Impedir seleccionar fechas futuras para la fecha de nacimiento
+
         datePickerDialog.datePicker.maxDate = System.currentTimeMillis()
         datePickerDialog.show()
     }
@@ -118,7 +118,7 @@ class RegisterFragment : Fragment() {
                     } else {
                         val nuevoUsuario = UserEntity(
                             nombre = nombre,
-                            birthdate = birthdate, // ahora siempre viene validada
+                            birthdate = birthdate,
                             username = username,
                             password = pass
                         )

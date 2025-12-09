@@ -13,7 +13,7 @@
         android:text="EduSexual"
         android:textSize="40sp"
         android:textStyle="bold"
-        android:textColor="#9A4DAB"
+        android:textColor="@color/pinkText"
         android:layout_marginBottom="10dp"/>
 
     <ImageView
@@ -23,13 +23,6 @@
         android:contentDescription="Logo de la aplicación"
         android:src="@drawable/logo_app" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp"
-        android:text="Bienvenido"
-        android:textColor="#9A4DAB"
-        android:textSize="18sp" />
 
     <EditText
         android:id="@+id/etUserLogin"
@@ -51,13 +44,26 @@
         android:padding="12dp"
         android:layout_marginBottom="24dp"/>
 
+    <TextView
+        android:id="@+id/tvForgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="¿Olvidaste tu contraseña?"
+        android:textColor="#666666"
+
+        android:layout_marginBottom="8dp"/>
+
+
     <Button
         android:id="@+id/btnLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="INGRESAR"
         android:textStyle="bold"
-        android:backgroundTint="#9A4DAB"
+        android:backgroundTint="@color/purpleText"
         android:textColor="#FFFFFF"
         android:padding="12dp"
         android:layout_marginBottom="16dp"/>
@@ -73,7 +79,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Crear cuenta nueva"
-        android:backgroundTint="@color/purple"
+        android:backgroundTint="#009688"
         android:textColor="#FFFFFF"/>
 
 </LinearLayout>

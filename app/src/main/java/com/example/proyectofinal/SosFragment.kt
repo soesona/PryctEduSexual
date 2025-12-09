@@ -60,6 +60,9 @@ class SosFragment : Fragment(R.layout.fragment_sos) {
             abrirMarcador("114")
         }
 
+        binding.btnHelplineSuicide.setOnClickListener {
+            abrirMarcador("150")
+        }
 
     }
 

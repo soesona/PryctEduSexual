@@ -4,10 +4,9 @@ import android.content.res.ColorStateList
 import android.graphics.Color
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
+import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
 import com.example.proyectofinal.databinding.FragmentMethodsBinding
 
 class MethodsFragment : Fragment(R.layout.fragment_methods) {
@@ -33,42 +32,27 @@ class MethodsFragment : Fragment(R.layout.fragment_methods) {
             filtrar(binding, "permanente")
             actualizarBotones(binding, binding.filterPerm)
         }
-
-
-        binding.btnLaunchQuizMethods.setOnClickListener {
-
-            val bundle = Bundle()
-            bundle.putString("categoria", "metodos")
-
-            try {
-
-                findNavController().navigate(R.id.action_methodsFragment_to_quizFragment, bundle)
-            } catch (e: Exception) {
-
-                Toast.makeText(context, "Error de navegación: Revisa el nav_graph", Toast.LENGTH_LONG).show()
-            }
-        }
     }
 
     private fun filtrar(binding: FragmentMethodsBinding, tipo: String) {
-
         binding.cardPildora.isVisible = (tipo == "todos" || tipo == "hormonal")
+        binding.cardImplante.isVisible = (tipo == "todos" || tipo == "hormonal")
         binding.cardDiu.isVisible = (tipo == "todos" || tipo == "hormonal")
         binding.cardCondon.isVisible = (tipo == "todos" || tipo == "barrera")
         binding.cardVasec.isVisible = (tipo == "todos" || tipo == "permanente")
+        binding.cardEmergencia.isVisible = (tipo == "todos")
     }
 
     private fun actualizarBotones(binding: FragmentMethodsBinding, btnActivo: View) {
-
         val colorInactivo = ColorStateList.valueOf(Color.parseColor("#BDBDBD"))
-        val colorActivo = ColorStateList.valueOf(Color.parseColor("#6200EE"))
+        val colorActivo = ColorStateList.valueOf(ContextCompat.getColor(requireContext(), R.color.purple))
+
 
 
         binding.filterTodos.backgroundTintList = colorInactivo
         binding.filterHormonal.backgroundTintList = colorInactivo
         binding.filterBarrera.backgroundTintList = colorInactivo
         binding.filterPerm.backgroundTintList = colorInactivo
-
 
         btnActivo.backgroundTintList = colorActivo
     }

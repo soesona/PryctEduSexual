@@ -29,6 +29,9 @@ interface AppDao {
     @Update
     suspend fun updateProfile(user: UserEntity)
 
+    @Query("UPDATE users SET nombre = :nombre, birthdate = :birthdate, password = :password WHERE username = :username")
+    suspend fun updateUserData(username: String, nombre: String, birthdate: String, password: String)
+
 
     @Query("SELECT * FROM users WHERE id = :userId LIMIT 1")
     suspend fun getUserById(userId: Int): UserEntity?
@@ -51,6 +54,10 @@ interface AppDao {
 
     @Delete
     suspend fun deleteCycle(cycle: CycleEntity)
+
+    @Query("SELECT * FROM users WHERE username = :username LIMIT 1")
+    suspend fun getUserByUsername(username: String): UserEntity?
+
 
 
 }
