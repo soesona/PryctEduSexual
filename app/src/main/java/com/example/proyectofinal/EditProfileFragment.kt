@@ -94,7 +94,7 @@ class EditarPerfilFragment : Fragment(R.layout.fragment_edit_profile) {
 
             usuarioActual = usuario
 
-            tvUsername.text = "Usuario: ${usuario.username}"
+            tvUsername.text = "${usuario.username}"
             etNombre.setText(usuario.nombre)
             etPassword.setText(usuario.password)
 
