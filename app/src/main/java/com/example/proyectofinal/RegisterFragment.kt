@@ -88,7 +88,7 @@ class RegisterFragment : Fragment() {
             val username = etUsername.text.toString().trim()
             val pass = etPass.text.toString().trim()
 
-            // Paso 3: validar fecha escrita manualmente
+
             val birthdateText = etBirthdate.text.toString().trim()
             val formatterDisplay = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
             val formatterDb = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())

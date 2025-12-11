@@ -17,9 +17,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
-            android:layout_marginTop="22dp"
+            android:layout_marginTop="28dp"
             android:text="Mi Calendario"
-            android:textColor="@color/purpleText"
+            android:textColor="@color/textRegister"
             android:textSize="24sp"
             android:textStyle="bold" />
 
@@ -176,7 +176,7 @@
         android:clipToPadding="false"
         android:scrollbars="vertical"/>
 
-    <!-- Controles de paginación -->
+
     <LinearLayout
         android:id="@+id/paginationControls"
         android:layout_width="match_parent"

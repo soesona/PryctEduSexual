@@ -190,7 +190,7 @@
                 android:layout_weight="1"
                 android:layout_height="wrap_content">
                 <TextView
-                    android:text="Mitos VS Realidad"
+                    android:text="Mito VS Realidad"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     android:textColor="@android:color/black"

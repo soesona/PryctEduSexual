@@ -3,79 +3,292 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    android:background="@color/backApp">
+    android:background="@color/backApp"
+    android:padding="24dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+
         <TextView
-            android:text="Mitos vs Realidad"
-            android:textSize="28sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mito vs Realidad"
+            android:textSize="30sp"
             android:textStyle="bold"
-            android:textColor="#333"
-            android:drawablePadding="10dp"
+            android:textColor="@color/textRegister"
+            android:gravity="center"
             android:layout_marginTop="22dp"
-            android:gravity="center_vertical"
+            android:layout_marginBottom="28dp"/>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
             app:cardCornerRadius="12dp"
-            app:cardBackgroundColor="#FFFABC">
-            <LinearLayout android:orientation="vertical" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
-                <TextView android:text="⚠️ Verdades Universales" android:textStyle="bold" android:textColor="#C62828" android:textSize="18sp" android:layout_marginBottom="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-                <TextView android:text="• El consentimiento se puede retirar en cualquier momento.\n• Tu cuerpo es tuyo.\n• Debes ir al médico anual (hombres y mujeres).\n• El alcohol EMPEORA el juicio y el desempeño sexual." android:textColor="#5D4037" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            app:cardElevation="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="6dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_check"
+                    android:contentDescription="Icono verdades"
+                    android:tint="@color/textRegister"
+                    android:layout_marginEnd="8dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Verdades Universales"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textColor="@color/textRegister"/>
+                </LinearLayout>
+
+                <!-- Contenido -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="• El consentimiento se puede retirar en cualquier momento.\n• Tu cuerpo es tuyo.\n• Debes ir al médico anual.\n• El alcohol empeora el juicio y el desempeño sexual."
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:lineSpacingExtra="4dp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="MITO"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:textColor="@color/alertRed"
+                    android:background="#FFEBEE"
+                    android:padding="6dp"
+                    android:layout_marginBottom="4dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Lavarse con limón, Coca-Cola o tés evita embarazo."
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:layout_marginBottom="12dp"/>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="REALIDAD"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:textColor="#2E7D32"
+                    android:background="#E8F5E9"
+                    android:padding="6dp"
+                    android:layout_marginBottom="4dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Falso y peligroso. El esperma nada muy rápido hacia el útero. Introducir líquidos causa infecciones graves."
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:lineSpacingExtra="4dp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="MITO"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:textColor="@color/alertRed"
+                    android:background="#FFEBEE"
+                    android:padding="6dp"
+                    android:layout_marginBottom="4dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Si estoy arriba, salto después o lo hago en agua, no me embarazo."
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:layout_marginBottom="12dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="REALIDAD"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:textColor="#2E7D32"
+                    android:background="#E8F5E9"
+                    android:padding="6dp"
+                    android:layout_marginBottom="4dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="La gravedad no detiene a los espermatozoides. El agua de piscina no entra lo suficiente para matarlos."
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:lineSpacingExtra="4dp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="MITO"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:textColor="@color/alertRed"
+                    android:background="#FFEBEE"
+                    android:padding="6dp"
+                    android:layout_marginBottom="4dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Primera vez, menstruación o sin orgasmo = Seguro."
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:layout_marginBottom="12dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="REALIDAD"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:textColor="#2E7D32"
+                    android:background="#E8F5E9"
+                    android:padding="6dp"
+                    android:layout_marginBottom="4dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="La fertilidad no depende de la experiencia ni del placer. El esperma vive 5 días, así que la regla no protege 100%."
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:lineSpacingExtra="4dp"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            app:cardCornerRadius="12dp">
-            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
-                <TextView android:text="❌ MITO: Lavarse, Limón, Coca-Cola o Tés evitan embarazo." android:padding="16dp" android:background="#FFEBEE" android:textColor="@color/alertRed" android:textStyle="bold" android:layout_width="match_parent" android:layout_height="wrap_content"/>
-                <TextView android:text="✅ REALIDAD: Falso y peligroso. El esperma nada muy rápido hacia el útero. Introducir líquidos causa infecciones graves." android:padding="16dp" android:background="#E8F5E9" android:textColor="#2E7D32" android:layout_width="match_parent" android:layout_height="wrap_content"/>
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
+            android:layout_marginBottom="20dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp">
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            app:cardCornerRadius="12dp">
-            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
-                <TextView android:text="❌ MITO: Si estoy arriba, salto después o lo hago en agua, no me embarazo." android:padding="16dp" android:background="#FFEBEE" android:textColor="@color/alertRed" android:textStyle="bold" android:layout_width="match_parent" android:layout_height="wrap_content"/>
-                <TextView android:text="✅ REALIDAD: La gravedad NO detiene a los espermatozoides. El agua de piscina no entra lo suficiente para matarlos." android:padding="16dp" android:background="#E8F5E9" android:textColor="#2E7D32" android:layout_width="match_parent" android:layout_height="wrap_content"/>
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            app:cardCornerRadius="12dp">
-            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
-                <TextView android:text="❌ MITO: Primera vez, menstruación o sin orgasmo = Seguro." android:padding="16dp" android:background="#FFEBEE" android:textColor="@color/alertRed" android:textStyle="bold" android:layout_width="match_parent" android:layout_height="wrap_content"/>
-                <TextView android:text="✅ REALIDAD: La fertilidad no depende de la experiencia ni del placer. El esperma vive 5 días, así que la regla no protege 100%." android:padding="16dp" android:background="#E8F5E9" android:textColor="#2E7D32" android:layout_width="match_parent" android:layout_height="wrap_content"/>
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            app:cardCornerRadius="12dp">
-            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
-                <TextView android:text="❌ MITO: Doble condón o Coito interrumpido." android:padding="16dp" android:background="#FFEBEE" android:textColor="@color/alertRed" android:textStyle="bold" android:layout_width="match_parent" android:layout_height="wrap_content"/>
-                <TextView android:text="✅ REALIDAD: Doble condón causa fricción y ruptura. El líquido preseminal tiene esperma. El sexo anal no embaraza pero transmite ETS." android:padding="16dp" android:background="#E8F5E9" android:textColor="#2E7D32" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="MITO"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:textColor="@color/alertRed"
+                    android:background="#FFEBEE"
+                    android:padding="6dp"
+                    android:layout_marginBottom="4dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Doble condón o coito interrumpido."
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:layout_marginBottom="12dp"/>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="REALIDAD"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:textColor="#2E7D32"
+                    android:background="#E8F5E9"
+                    android:padding="6dp"
+                    android:layout_marginBottom="4dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="El doble condón causa fricción y ruptura. El líquido preseminal tiene esperma. El sexo anal no embaraza pero transmite ETS."
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:lineSpacingExtra="4dp"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 

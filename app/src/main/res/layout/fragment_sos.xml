@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -14,21 +14,23 @@
         android:gravity="center_horizontal">
 
         <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:text="Ayuda Inmediata"
             android:textSize="28sp"
             android:textStyle="bold"
+            android:textColor="@color/textRegister"
+            android:gravity="center"
             android:layout_marginTop="25dp"
-            android:textColor="@color/purpleText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"/>
+            android:layout_marginBottom="12dp"/>
 
         <TextView
-            android:text="Usa estos botones en caso de emergencia o riesgo"
-            android:gravity="center"
-            android:textColor="#474646"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="Usa estos botones en caso de emergencia o riesgo"
+            android:gravity="center"
+            android:textColor="#6D6D73"
+            android:textSize="15sp"
             android:layout_marginBottom="30dp"/>
 
         <androidx.cardview.widget.CardView
@@ -36,7 +38,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:cardCornerRadius="16dp"
-            app:cardElevation="6dp"
+            app:cardElevation="4dp"
             android:layout_marginBottom="20dp"
             android:clickable="true"
             android:focusable="true"
@@ -46,15 +48,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:padding="20dp"
-                android:background="@color/white"
+                android:padding="18dp"
                 android:gravity="center_vertical">
 
                 <ImageView
-                    android:src="@android:drawable/stat_sys_warning"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    app:tint="#D32F2F"/>
+                    android:src="@android:drawable/stat_sys_warning"
+                    app:tint="#D32F2F" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -63,18 +64,19 @@
                     android:layout_marginStart="16dp">
 
                     <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:text="Llamar a Emergencias"
                         android:textSize="18sp"
                         android:textStyle="bold"
-                        android:textColor="#D32F2F"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:textColor="#D32F2F"/>
+
                     <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:text="Policía / Ambulancia (911)"
                         android:textSize="14sp"
-                        android:textColor="#B71C1C"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:textColor="#B71C1C"/>
                 </LinearLayout>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -94,15 +96,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:padding="20dp"
-                android:background="@color/white"
+                android:padding="18dp"
                 android:gravity="center_vertical">
 
                 <ImageView
-                    android:src="@drawable/ic_friend"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    app:tint="@color/pinkPastel"/>
+                    android:src="@drawable/ic_friend"
+                    app:tint="@color/pinkPastel" />
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -112,29 +113,29 @@
                     android:layout_marginStart="16dp">
 
                     <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:text="Contacto de Confianza"
                         android:textSize="18sp"
                         android:textStyle="bold"
-                        android:textColor="#333333"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:textColor="@color/textRegister"/>
 
                     <TextView
                         android:id="@+id/tvTrustedNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:text="Toca para configurar"
                         android:textSize="14sp"
-                        android:textColor="#757575"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:textColor="#757575"/>
                 </LinearLayout>
 
                 <ImageView
                     android:id="@+id/btnEditTrusted"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
                     android:src="@android:drawable/ic_menu_edit"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    app:tint="#7C7A7A"
-                    android:padding="4dp"/>
+                    android:padding="4dp"
+                    app:tint="#7C7A7A" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -144,16 +145,20 @@
             android:layout_height="60dp"
             android:layout_marginTop="15dp"
             android:backgroundTint="@color/menstrualDays2"
-            android:text="Línea de salud mental" />
+            android:text="Línea de salud mental"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="16sp"/>
 
         <Button
             android:id="@+id/btnHelplineGender"
-            android:text="Línea para denunciar violencia de genero"
-            android:backgroundTint="@color/purple"
-            android:layout_marginTop="20dp"
             android:layout_width="match_parent"
-            android:layout_height="60dp"/>
-
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/colorRegister"
+            android:text="Línea para denunciar violencia de género"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="16sp"/>
     </LinearLayout>
-
-</ScrollView>
+</LinearLayout>

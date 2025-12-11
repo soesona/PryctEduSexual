@@ -75,7 +75,7 @@
             </LinearLayout>
         </HorizontalScrollView>
 
-        <!-- Card: Preservativo -->
+
         <androidx.cardview.widget.CardView
             android:id="@+id/cardCondon"
             android:layout_width="match_parent"
@@ -258,7 +258,7 @@
                 <TextView
                     android:text="Permanente"
                     android:textSize="12sp"
-                    android:textColor="@color/iconsColorLogin"
+                    android:textColor="@color/purpleText"
                     android:layout_marginBottom="5dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
@@ -297,7 +297,7 @@
                 <TextView
                     android:text="Cuidado con esto"
                     android:textSize="12sp"
-                    android:textColor="@color/iconsColorLogin"
+                    android:textColor="@color/purpleText"
                     android:layout_marginBottom="5dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>

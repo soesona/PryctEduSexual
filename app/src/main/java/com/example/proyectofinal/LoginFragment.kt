@@ -15,10 +15,6 @@ import kotlinx.coroutines.launch
 import android.widget.TextView
 
 
-// Asegúrate de que estos imports no salgan en rojo.
-// Si salen en rojo, borra y vuélvelos a escribir o usa Alt+Enter.
-import com.example.proyectofinal.AppDatabase
-import com.example.proyectofinal.databinding.FragmentLoginBinding
 
 class LoginFragment : Fragment() {
 
@@ -40,7 +36,7 @@ class LoginFragment : Fragment() {
 
 
 
-//        val binding = FragmentLoginBinding.bind(view)
+
 
 
 
