@@ -82,14 +82,19 @@
 
     <action
         android:id="@+id/action_home_to_editProfileFragment"
-        app:destination="@id/editProfileFragment" />
+        app:destination="@id/editProfileFragment"
+/>
 
 
 <fragment
 android:id="@+id/editProfileFragment"
 android:name="com.example.proyectofinal.EditarPerfilFragment"
 android:label="Editar Perfil"
-tools:layout="@layout/fragment_edit_profile" />
+tools:layout="@layout/fragment_edit_profile">
+    <action
+        android:id="@+id/action_editProfileFragment_to_loginFragment"
+        app:destination="@id/loginFragment" />
+</fragment>
 
 
 

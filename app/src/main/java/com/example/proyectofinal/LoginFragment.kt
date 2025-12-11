@@ -12,6 +12,8 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import kotlinx.coroutines.launch
+import android.widget.TextView
+
 
 // Asegúrate de que estos imports no salgan en rojo.
 // Si salen en rojo, borra y vuélvelos a escribir o usa Alt+Enter.
@@ -28,23 +30,32 @@ class LoginFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_login, container, false)
 
-
         val etUserLogin = view.findViewById<EditText>(R.id.etUserLogin)
         val etPass = view.findViewById<EditText>(R.id.etPasswordLogin)
         val btnLogin = view.findViewById<Button>(R.id.btnLogin)
-        val btnRegister = view.findViewById<Button>(R.id.btnGoToRegister)
-        val binding = FragmentLoginBinding.bind(view)
+        val tvForgotPassword = view.findViewById<TextView>(R.id.tvForgotPassword)
+        val tvGoToRegister = view.findViewById<TextView>(R.id.tvGoToRegister)
 
 
 
 
-        binding.tvForgotPassword.setOnClickListener {
-            findNavController().navigate(R.id.action_loginFragment_to_changePasswordFragment)
+
+//        val binding = FragmentLoginBinding.bind(view)
+
+
+
+
+
+        tvForgotPassword.setOnClickListener {
+            try {
+                findNavController().navigate(R.id.action_loginFragment_to_changePasswordFragment)
+            } catch (e: Exception) {
+                Toast.makeText(context, "Error de navegación: verifica tu nav_graph", Toast.LENGTH_SHORT).show()
+            }
+
         }
 
-
-        btnRegister.setOnClickListener {
-
+        tvGoToRegister.setOnClickListener {
             try {
                 findNavController().navigate(R.id.action_login_to_register)
             } catch (e: Exception) {

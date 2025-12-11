@@ -1,75 +1,223 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/backApp"
-    android:padding="16dp">
+    android:padding="28dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+
         <TextView
-            android:text="ETS/ITS"
-            android:textSize="28sp"
+            android:text="ETS / ITS"
+            android:textSize="32sp"
             android:textStyle="bold"
-            android:textColor="#333"
-            android:drawablePadding="10dp"
-            android:gravity="center_vertical"
+            android:textColor="@color/textRegister"
+            android:gravity="center"
             android:layout_marginTop="22dp"
-            android:layout_marginBottom="20dp"
-            android:layout_width="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
+
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="24dp"
             app:cardCornerRadius="16dp"
-            app:cardBackgroundColor="#7758D1">
+            app:cardBackgroundColor="@color/colorRegister">
+
             <LinearLayout
                 android:padding="20dp"
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-                <TextView android:text="🔍 ¿Cómo se transmiten?" android:textColor="#FFF" android:textSize="20sp" android:textStyle="bold" android:layout_marginBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-                <TextView android:text="• SÍ: Fluidos sexuales, sangre, contacto piel con piel (herpes/VPH), juguetes compartidos.\n• NO: Besos, abrazos, compartir vasos o baños.\n• El sexo oral SÍ transmite ETS.\n• Las duchas vaginales NO protegen, empeoran." android:textColor="#EDE7F6" android:textSize="15sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="14dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_search"
+                        app:tint="@android:color/white"
+                        android:layout_marginEnd="8dp"/>
+
+                    <TextView
+                        android:text="¿Cómo se transmiten?"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="#6A4FB6"
+                    android:layout_marginBottom="12dp">
+
+                    <LinearLayout
+                        android:padding="16dp"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:text="SÍ se transmiten por:"
+                            android:textColor="#C8E6C9"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="6dp"/>
+
+                        <TextView
+                            android:text="• Fluidos sexuales\n• Sangre\n• Contacto piel con piel (herpes/VPH)\n• Juguetes compartidos\n• Sexo oral"
+                            android:textColor="#FFFFFF"
+                            android:textSize="15sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="#5B3FA0">
+
+                    <LinearLayout
+                        android:padding="16dp"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:text="NO se transmiten por:"
+                            android:textColor="#FFCDD2"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="6dp"/>
+
+                        <TextView
+                            android:text="• Besos\n• Abrazos\n• Compartir vasos\n• Compartir baños\n• Duchas vaginales (no protegen, empeoran)"
+                            android:textColor="#FFFFFF"
+                            android:textSize="15sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
             </LinearLayout>
         </androidx.cardview.widget.CardView>
+
+
+
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
             app:cardCornerRadius="12dp">
-            <LinearLayout android:padding="16dp" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
-                <TextView android:text="Virus (Se controlan, no se curan)" android:textStyle="bold" android:textSize="18sp" android:textColor="#D32F2F" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-                <TextView android:text="• VIH: Virus que causa SIDA (etapa avanzada). Se ve 'sano' por años. Tratamiento permite vida normal.\n• Herpes: Ampollas dolorosas. El virus duerme en el cuerpo.\n• VPH: Causa verrugas y cáncer. ¡Hay vacuna!" android:textColor="#424242" android:layout_marginTop="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:padding="16dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="Virus (Se controlan, no se curan)"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="#D32F2F"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:text="• VIH: Virus que causa SIDA (etapa avanzada). Se ve 'sano' por años. Tratamiento permite vida normal.\n• Herpes: Ampollas dolorosas. El virus duerme en el cuerpo.\n• VPH: Causa verrugas y cáncer. ¡Hay vacuna!"
+                    android:textColor="#424242"
+                    android:layout_marginTop="5dp"
+                    android:textSize="15sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
+        <!-- Card: Bacterias -->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
             app:cardCornerRadius="12dp">
-            <LinearLayout android:padding="16dp" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
-                <TextView android:text="Bacterias (Se curan)" android:textStyle="bold" android:textSize="18sp" android:textColor="#388E3C" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-                <TextView android:text="• Sífilis, Gonorrea, Clamidia: Se curan con antibióticos.\n• Peligro: A menudo NO tienen síntomas. Si no se tratan, causan infertilidad o daños graves al cerebro/corazón.\n• No dejan inmunidad (te puedes re-contagiar)." android:textColor="#424242" android:layout_marginTop="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:padding="16dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="Bacterias (Se curan)"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="#388E3C"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:text="• Sífilis, Gonorrea, Clamidia: Se curan con antibióticos.\n• Peligro: A menudo NO tienen síntomas. Si no se tratan, causan infertilidad o daños graves al cerebro/corazón.\n• No dejan inmunidad (te puedes re-contagiar)."
+                    android:textColor="#424242"
+                    android:layout_marginTop="5dp"
+                    android:textSize="15sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
+        <!-- Card: Otras infecciones -->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             app:cardCornerRadius="12dp">
-            <LinearLayout android:padding="16dp" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
-                <TextView android:text="Otras Infecciones" android:textStyle="bold" android:textSize="18sp" android:textColor="#F57C00" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-                <TextView android:text="• Hepatitis B: Afecta al hígado. Transmisión sexual y sanguínea. Existe vacuna.\n• Ladillas (Piojos púbicos): Parásitos en el vello. Se pasan por contacto íntimo o ropa de cama." android:textColor="#424242" android:layout_marginTop="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:padding="16dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="Otras Infecciones"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="#F57C00"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:text="• Hepatitis B: Afecta al hígado. Transmisión sexual y sanguínea. Existe vacuna.\n• Ladillas (Piojos púbicos): Parásitos en el vello. Se pasan por contacto íntimo o ropa de cama."
+                    android:textColor="#424242"
+                    android:layout_marginTop="5dp"
+                    android:textSize="15sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 

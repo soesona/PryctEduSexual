@@ -68,6 +68,8 @@ class EditarPerfilFragment : Fragment(R.layout.fragment_edit_profile) {
         etPassword = view.findViewById(R.id.etPassword)
         tvUsername = view.findViewById(R.id.tvUsername)
         btnGuardar = view.findViewById(R.id.btnGuardar)
+        val tvLogout = view.findViewById<TextView>(R.id.tvLogout)
+
 
         etBirthdate.setOnClickListener {
             showDatePickerDialog(etBirthdate)
@@ -108,6 +110,18 @@ class EditarPerfilFragment : Fragment(R.layout.fragment_edit_profile) {
             }
         }
 
+        tvLogout.setOnClickListener {
+
+            val prefs = requireActivity().getSharedPreferences("SesionApp", Context.MODE_PRIVATE)
+            prefs.edit().clear().apply()
+
+
+            try {
+                findNavController().navigate(R.id.action_editProfileFragment_to_loginFragment)
+            } catch (e: Exception) {
+                Toast.makeText(context, "Error al cerrar sesión: verifica tu nav_graph", Toast.LENGTH_SHORT).show()
+            }
+        }
 
         btnGuardar.setOnClickListener {
             val nombre = etNombre.text.toString().trim()

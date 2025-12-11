@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
@@ -15,7 +16,8 @@ class ChangePasswordFragment : Fragment(R.layout.fragment_change_password) {
     private lateinit var etUserChange: EditText
     private lateinit var etNewPassword: EditText
     private lateinit var btnChangePassword: Button
-    private lateinit var btnVolver: Button
+
+    private lateinit var tvVolver: TextView
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -24,7 +26,10 @@ class ChangePasswordFragment : Fragment(R.layout.fragment_change_password) {
         etUserChange = view.findViewById(R.id.etUserChange)
         etNewPassword = view.findViewById(R.id.etNewPassword)
         btnChangePassword = view.findViewById(R.id.btnChangePassword)
-        btnVolver = view.findViewById(R.id.btnVolver)
+        tvVolver = view.findViewById(R.id.tvVolver)
+
+
+
 
         btnChangePassword.setOnClickListener {
             val username = etUserChange.text.toString().trim()
@@ -55,7 +60,7 @@ class ChangePasswordFragment : Fragment(R.layout.fragment_change_password) {
             }
         }
 
-        btnVolver.setOnClickListener {
+        tvVolver.setOnClickListener {
             findNavController().navigateUp()
 
         }

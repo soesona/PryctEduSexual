@@ -2,7 +2,7 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="backApp">#e1e7f1</color>
+    <color name="backApp">#F3F4F6</color>
     <color name="backCalendar">#EBF1FF</color>
     <color name="pinkPastel">#ED7182</color>
     <color name="pinkPastel2">#C85D6C</color>
@@ -13,8 +13,9 @@
     <color name="alertRedbutton">#92F4BEBE</color>
     <color name="pinkText">#F86479</color>
     <color name="purpleText">#5F52D7</color>
-
-
+    <color name="iconsColorLogin">#9ca3af</color>
+    <color name="colorRegister">#8473CC</color>
+ <color name="textRegister">#D95D71</color>
 
 
 
